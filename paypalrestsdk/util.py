@@ -19,7 +19,7 @@ def join_url(url, *paths):
         'example.com/index.html'
     """
     for path in paths:
-        url = re.sub(r'/?$', re.sub(r'^/?', '/', path), url)
+        url = re.sub(r'/?$', re.sub(r'^/?', '/', path), url, count=1)
     return url
 
 
